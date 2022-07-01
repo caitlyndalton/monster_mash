@@ -1,6 +1,39 @@
 @host = http://localhost:3000
 @jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NTY3MjMwNjR9.A8rEpXEMG-qXw0vkV1QEMEauqNxvqJi1c-s9hepihVg
 
+### Campaigns Index
+GET {{host}}/campaigns.json
+
+### Campaigns Create
+POST {{host}}/campaigns.json
+Authorization: Bearer {{jwt}}
+Content-Type: application/json
+
+{
+  "dm_id": "1",
+  "name": "Definitely Not a Cursed Town",
+  "description": "What? I already said - it's definitely not cursed."
+}
+
+### Campaign Show
+GET {{host}}/campaigns/2.json
+
+### Campaign Update
+PATCH {{host}}/campaigns/3.json
+Authorization: Bearer {{jwt}}
+Content-Type: application/json
+
+{
+  "name": "Okay it's a cursed town",
+  "description": "C'mon, don't blame me. If I told you it was cursed, you wouldn't have gone."
+}
+
+### Campaign Destroy
+DELETE {{host}}/campaigns/4.json
+Authorization: Bearer {{jwt}}
+
+
+
 ### Users create (signup)
 POST {{host}}/users.json
 Content-Type: application/json
