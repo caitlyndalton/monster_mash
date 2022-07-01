@@ -17,4 +17,10 @@ Rails.application.routes.draw do
   get "/creatures/:id" => "creatures#show"
   patch "/creatures/:id" => "creatures#update"
   delete "/creatures/:id" => "creatures#destroy"
+
+  get "/npcs" => "npcs#index"
+  post "/npcs" => "npcs#create"
+  get "/npcs/:id" => "npcs#show"
+  patch "/npcs/:id" => "npcs#update"
+  delete "/npcs/:id" => "npcs#destroy"
 end

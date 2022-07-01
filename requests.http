@@ -12,7 +12,7 @@ Authorization: Bearer {{jwt}}
 Content-Type: application/json
 
 {
-  "dm_id": "1",
+  "user_id": "1",
   "name": "Definitely Not a Cursed Town",
   "description": "What? I already said - it's definitely not cursed."
 }
@@ -68,8 +68,43 @@ Content-Type: application/json
 DELETE {{host}}/creatures/6.json
 Authorization: Bearer {{jwt}}
 
-#################### ITEMS ######################
+#################### NPCS ######################
 
+### Npcs Index
+GET {{host}}/npcs.json
+
+### Npcs Create
+POST {{host}}/npcs.json
+Authorization: Bearer {{jwt}}
+Content-Type: application/json
+
+{
+  "name": "Boblin",
+  "race": "humanoid",
+  "api_class": "Goblin",
+  "alignment": "neutral evil",
+  "level": "4",
+  "campaign_id": "2"
+}
+
+### Npcs Show
+GET {{host}}/npcs/4.json
+
+### Npcs Update
+PATCH {{host}}/npcs/4.json
+Authorization: Bearer {{jwt}}
+Content-Type: application/json
+
+{
+  "name": "Jimothy",
+  "race": "human",
+  "api_class": "fighter",
+  "alignment": "chaotic good"
+}
+
+### Npcs Destroy
+DELETE {{host}}/npcs/5.json
+Authorization: Bearer {{jwt}}
 
 
 #################### USERS ######################

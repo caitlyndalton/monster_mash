@@ -15,7 +15,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_07_01_014121) do
   enable_extension "plpgsql"
 
   create_table "campaigns", force: :cascade do |t|
-    t.integer "dm_id"
+    t.integer "user_id"
     t.string "name"
     t.text "description"
     t.datetime "created_at", null: false

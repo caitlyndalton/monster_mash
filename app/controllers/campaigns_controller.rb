@@ -1,4 +1,6 @@
 class CampaignsController < ApplicationController
+  before_action :authenticate_user, only: [:create, :update, :destroy]
+
   def index
     campaigns = Campaign.all
     render json: campaigns.as_json
@@ -6,7 +8,7 @@ class CampaignsController < ApplicationController
 
   def create
     campaign = Campaign.new(
-      dm_id: params["dm_id"],
+      user_id: params["user_id"],
       name: params["name"],
       description: params["description"],
     )
@@ -21,7 +23,7 @@ class CampaignsController < ApplicationController
 
   def update
     campaign = Campaign.find_by(id: params[:id])
-    campaign.dm_id = params[:dm_id] || campaign.dm_id
+    campaign.user_id = params[:user_id] || campaign.user_id
     campaign.name = params[:name] || campaign.name
     campaign.description = params[:description] || campaign.description
     campaign.save
