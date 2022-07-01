@@ -1,6 +1,8 @@
 @host = http://localhost:3000
 @jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NTY3MjMwNjR9.A8rEpXEMG-qXw0vkV1QEMEauqNxvqJi1c-s9hepihVg
 
+#################### CAMPAIGNS #####################
+
 ### Campaigns Index
 GET {{host}}/campaigns.json
 
@@ -32,7 +34,45 @@ Content-Type: application/json
 DELETE {{host}}/campaigns/4.json
 Authorization: Bearer {{jwt}}
 
+#################### CREATURES #####################
 
+### Creatures Index
+GET {{host}}/creatures.json
+
+### Creatures Create
+POST {{host}}/creatures.json
+Authorization: Bearer {{jwt}}
+Content-Type: application/json
+
+{
+  "api_index": "goblin",
+  "api_type": "humanoid",
+  "name": "Goblin",
+  "campaign_id": "3"
+}
+
+### Creatures Show
+GET {{host}}/creatures/6.json
+
+### Creatures Update
+PATCH {{host}}/creatures/6.json
+Authorization: Bearer {{jwt}}
+Content-Type: application/json
+
+{
+  "api_index": "gnoll",
+  "name": "Gnoll"
+}
+
+### Creatures Destroy
+DELETE {{host}}/creatures/6.json
+Authorization: Bearer {{jwt}}
+
+#################### ITEMS ######################
+
+
+
+#################### USERS ######################
 
 ### Users create (signup)
 POST {{host}}/users.json

@@ -11,4 +11,10 @@ Rails.application.routes.draw do
   get "/campaigns/:id" => "campaigns#show"
   patch "/campaigns/:id" => "campaigns#update"
   delete "campaigns/:id" => "campaigns#destroy"
+
+  get "/creatures" => "creatures#index"
+  post "/creatures" => "creatures#create"
+  get "/creatures/:id" => "creatures#show"
+  patch "/creatures/:id" => "creatures#update"
+  delete "/creatures/:id" => "creatures#destroy"
 end
