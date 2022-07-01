@@ -1,4 +1,5 @@
 @host = http://localhost:3000
+@jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NTY3MjMwNjR9.A8rEpXEMG-qXw0vkV1QEMEauqNxvqJi1c-s9hepihVg
 
 ### Users create (signup)
 POST {{host}}/users.json
@@ -9,4 +10,13 @@ Content-Type: application/json
   "email": "disconerds@gmail.com",
   "password": "password",
   "password_confirmation": "password"
+}
+
+### Sessions create (login)
+POST {{host}}/sessions.json
+Content-Type: application/json
+
+{
+  "email": "disconerds@gmail.com",
+  "password": "password"
 }
