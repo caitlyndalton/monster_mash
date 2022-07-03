@@ -1,5 +1,5 @@
 @host = http://localhost:3000
-@jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NTY3MjMwNjR9.A8rEpXEMG-qXw0vkV1QEMEauqNxvqJi1c-s9hepihVg
+@jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NTY5NDU2MjF9.2PJKGz4Se_J3g_uId6P5rRM3HM1ZBQkVlP4YHD2LlC4
 
 #################### CAMPAIGNS #####################
 
@@ -18,10 +18,10 @@ Content-Type: application/json
 }
 
 ### Campaign Show
-GET {{host}}/campaigns/2.json
+GET {{host}}/campaigns/6.json
 
 ### Campaign Update
-PATCH {{host}}/campaigns/3.json
+PATCH {{host}}/campaigns/6.json
 Authorization: Bearer {{jwt}}
 Content-Type: application/json
 
@@ -31,7 +31,7 @@ Content-Type: application/json
 }
 
 ### Campaign Destroy
-DELETE {{host}}/campaigns/4.json
+DELETE {{host}}/campaigns/6.json
 Authorization: Bearer {{jwt}}
 
 #################### CREATURES #####################
@@ -52,10 +52,10 @@ Content-Type: application/json
 }
 
 ### Creatures Show
-GET {{host}}/creatures/6.json
+GET {{host}}/creatures/8.json
 
 ### Creatures Update
-PATCH {{host}}/creatures/6.json
+PATCH {{host}}/creatures/8.json
 Authorization: Bearer {{jwt}}
 Content-Type: application/json
 
@@ -65,7 +65,7 @@ Content-Type: application/json
 }
 
 ### Creatures Destroy
-DELETE {{host}}/creatures/6.json
+DELETE {{host}}/creatures/8.json
 Authorization: Bearer {{jwt}}
 
 #################### NPCS ######################
@@ -88,10 +88,10 @@ Content-Type: application/json
 }
 
 ### Npcs Show
-GET {{host}}/npcs/4.json
+GET {{host}}/npcs/6.json
 
 ### Npcs Update
-PATCH {{host}}/npcs/4.json
+PATCH {{host}}/npcs/6.json
 Authorization: Bearer {{jwt}}
 Content-Type: application/json
 
@@ -103,7 +103,7 @@ Content-Type: application/json
 }
 
 ### Npcs Destroy
-DELETE {{host}}/npcs/5.json
+DELETE {{host}}/npcs/6.json
 Authorization: Bearer {{jwt}}
 
 
