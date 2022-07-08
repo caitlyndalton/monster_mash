@@ -8,12 +8,15 @@ class CampaignsController < ApplicationController
 
   def create
     campaign = Campaign.new(
-      user_id: params["user_id"],
+      user_id: current_user.id,
       name: params["name"],
       description: params["description"],
     )
-    campaign.save
-    render json: campaign.as_json
+    if campaign.save
+      render json: campaign.as_json
+    else
+      render json: { errors: campaign.errors.full_messages }, status: 422
+    end
   end
 
   def show
@@ -23,7 +26,6 @@ class CampaignsController < ApplicationController
 
   def update
     campaign = Campaign.find_by(id: params[:id])
-    campaign.user_id = params[:user_id] || campaign.user_id
     campaign.name = params[:name] || campaign.name
     campaign.description = params[:description] || campaign.description
     campaign.save
