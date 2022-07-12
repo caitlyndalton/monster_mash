@@ -2,8 +2,8 @@ class CampaignsController < ApplicationController
   before_action :authenticate_user, only: [:create, :update, :destroy]
 
   def index
-    campaigns = Campaign.all
-    render json: campaigns.as_json
+    @campaigns = Campaign.all
+    render template: "campaigns/index"
   end
 
   def create

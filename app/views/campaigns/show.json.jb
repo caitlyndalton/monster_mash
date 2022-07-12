@@ -1,0 +1,7 @@
+{
+  name: @campaign.name,
+  description: @campaign.description,
+  creatures: @campaign.creatures,
+  items: @campaign.items,
+  npcs: @campaign.npcs,
+}
