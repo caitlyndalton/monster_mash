@@ -1,4 +1,5 @@
 {
+  id: @campaign.id,
   name: @campaign.name,
   description: @campaign.description,
   creatures: @campaign.creatures,

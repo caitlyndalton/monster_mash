@@ -1,5 +1,5 @@
 @host = http://localhost:3000
-@jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NTY5NDU2MjF9.2PJKGz4Se_J3g_uId6P5rRM3HM1ZBQkVlP4YHD2LlC4
+@jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NTc3NTk3OTl9.eLpP6pC-6wMNtkw6JmDwunNr5LBRrvT5_pYxWaQNngI
 
 #################### CAMPAIGNS #####################
 
@@ -18,16 +18,16 @@ Content-Type: application/json
 }
 
 ### Campaign Show
-GET {{host}}/campaigns/6.json
+GET {{host}}/campaigns/11.json
 
 ### Campaign Update
-PATCH {{host}}/campaigns/6.json
+PATCH {{host}}/campaigns/11.json
 Authorization: Bearer {{jwt}}
 Content-Type: application/json
 
 {
-  "name": "Okay it's a cursed town",
-  "description": "C'mon, don't blame me. If I told you it was cursed, you wouldn't have gone."
+  "name": "Definitely not a cursed town still!",
+  "description": "Dude, i literally promise. it's fine."
 }
 
 ### Campaign Destroy
