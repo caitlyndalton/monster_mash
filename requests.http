@@ -1,5 +1,5 @@
 @host = http://localhost:3000
-@jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NTc3NTk3OTl9.eLpP6pC-6wMNtkw6JmDwunNr5LBRrvT5_pYxWaQNngI
+@jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NTc4NDA2MzN9.ldG_vG-trgGR7fMrt4AaZB-y4w4tzVUdG3F9WPh9uH4
 
 #################### CAMPAIGNS #####################
 
@@ -103,7 +103,7 @@ Content-Type: application/json
 }
 
 ### Npcs Destroy
-DELETE {{host}}/npcs/6.json
+DELETE {{host}}/npcs/8.json
 Authorization: Bearer {{jwt}}
 
 
