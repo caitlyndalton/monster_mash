@@ -1,5 +1,5 @@
 @host = http://localhost:3000
-@jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NTc4NDA2MzN9.ldG_vG-trgGR7fMrt4AaZB-y4w4tzVUdG3F9WPh9uH4
+@jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2ODIwNDIwNTZ9.IoCMvQwckjvv2H8-59NKAtRLYa_UyXFeAWMELYkjtnk
 
 #################### CAMPAIGNS #####################
 
@@ -18,7 +18,7 @@ Content-Type: application/json
 }
 
 ### Campaign Show
-GET {{host}}/campaigns/11.json
+GET {{host}}/campaigns/1.json
 
 ### Campaign Update
 PATCH {{host}}/campaigns/11.json
